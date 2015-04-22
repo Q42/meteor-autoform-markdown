@@ -25,7 +25,7 @@ Schemas.Quest = new SimpleSchema({
 });
 ```
 
-Render your markdown text using the renderMarkdown helper in your template
+Render markdown text using the renderMarkdown helper in your template
 
 ```
 <template name="quest">
