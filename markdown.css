@@ -1,5 +1,6 @@
 .markdownControls {
   margin-bottom: 10px;
+  text-align: left;
 }
 .markdownControls  select.form-control {
   width: auto;
@@ -37,6 +38,7 @@
 
 .markdownPreview {
   padding-left: 10px;
+  text-align: left;
 }
 .markdownPreview  span.preview {
     background-color: #eee;

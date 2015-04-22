@@ -13,7 +13,7 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom(['METEOR@0.9.3', 'METEOR@0.9.4', 'METEOR@1.0']);
   api.use(['templating', 'ui', 'blaze'], 'client');
-  api.use(['chuangbo:marked', 'aldeed:autoform'], 'client');
+  api.use(['perak:markdown', 'aldeed:autoform'], 'client');
   api.addFiles([
     'markdown.html',
     'markdown.css',

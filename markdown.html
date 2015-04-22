@@ -2,10 +2,10 @@
 
   <section class="markdownControls">
     <select class="markdownHeader form-control">
-      <option value="">koppen</option>
-      <option value="#"># kop 1</option>
-      <option value="##">## kop 2</option>
-      <option value="##">### kop 3</option>
+      <option value="">headers</option>
+      <option value="#"># header 1</option>
+      <option value="##">## header 2</option>
+      <option value="##">### header 3</option>
     </select>
     <button class="markdownBold select btn">**bold**</button>
     <button class="markdownItalic select btn">*italic*</button>
@@ -13,11 +13,11 @@
   </section>
 
   <section class="markdownContent">
-    <textarea class="form-control markdownInput">{{value}}</textarea>
+    <textarea class="form-control markdownInput" {{atts}}>{{value}}</textarea>
   </section>
   <section class="markdownPreview">
     <span class="form-control preview">
-      {{{markdownText}}}
+        {{{markdownText}}}
     </span>
   </section>
 </template>

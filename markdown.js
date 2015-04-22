@@ -2,6 +2,11 @@ marked.setOptions({
   breaks: true
 });
 
+Template.registerHelper('renderMarkdown', function renderMarkdown(value) {
+  if(value)
+    return marked(value);
+});
+
 Template.afMarkdown.created = function() {
   this.markdownInput = new ReactiveVar('');
 };
@@ -18,7 +23,7 @@ Template.afMarkdown.helpers({
 });
 
 Template.afMarkdown.events({
-  'keyup .visible .markdownInput': function(evt, instance) {
+  'keyup .markdownInput': function(evt, instance) {
     instance.markdownInput.set(evt.currentTarget.value);
   },
   'click .select': function(evt, instance) {
@@ -26,7 +31,7 @@ Template.afMarkdown.events({
 
     var markdown = evt.currentTarget.className.split(' ')[0];
 
-    var textArea = Template.instance().$('.visible .markdownInput');
+    var textArea = Template.instance().$('.markdownInput');
 
     var selectedText = textArea.selection();
 
@@ -53,7 +58,7 @@ Template.afMarkdown.events({
   },
   'change .markdownHeader': function(evt, instance) {
     var header = $(evt.currentTarget).find('option:selected').val();
-    var textArea = Template.instance().$('.visible .markdownInput');
+    var textArea = Template.instance().$('.markdownInput');
 
     var selectedText = textArea.selection();
     textArea.selection('replace', { text: header + selectedText });
@@ -63,5 +68,5 @@ Template.afMarkdown.events({
 });
 
 AutoForm.addInputType("markdown", {
-  template: "afMarkdown"
+  template: "afMarkdown",
 });
