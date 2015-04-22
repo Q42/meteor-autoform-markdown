@@ -9,8 +9,6 @@ Usage
 
 Add a custom template in your Schema
 
-Example:
-
 ```
 Schemas.Quest = new SimpleSchema({
   title: {
