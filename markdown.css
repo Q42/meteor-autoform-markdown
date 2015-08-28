@@ -1,6 +1,25 @@
+.flexcontainer,
+.flexcontainer .markdownContent,
+.flexcontainer .markdownPreview   {
+  display: flex;
+}
+
+.flexcontainer .markdownPreview {
+  flex-direction: column;
+}
+
+.flexcontainer .markdownPreview .preview,
+.flexcontainer .markdownContent textarea {
+  flex: 1;
+}
+
 .markdownControls {
   margin-bottom: 10px;
   text-align: left;
+}
+
+.markdownControls a {
+  margin-left: 10px;
 }
 .markdownControls  select.form-control {
   width: auto;

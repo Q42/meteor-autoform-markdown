@@ -13,12 +13,14 @@
     <a href="https://help.github.com/articles/markdown-basics/" target="_blank">help</a>
   </section>
 
-  <section class="markdownContent">
-    <textarea class="form-control markdownInput" {{atts}}>{{value}}</textarea>
-  </section>
-  <section class="markdownPreview">
-    <span class="form-control preview">
-        {{{markdownText}}}
-    </span>
-  </section>
+  <div class="flexcontainer">
+    <section class="markdownContent">
+      <textarea class="form-control markdownInput" {{atts}}>{{value}}</textarea>
+    </section>
+    <section class="markdownPreview">
+      <span class="form-control preview">
+          {{{markdownText}}}
+      </span>
+    </section>
+  </div>
 </template>
