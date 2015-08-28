@@ -3,6 +3,9 @@ autoform-markdown
 
 A simple markdown textarea with preview using perak:markdown
 
+Demo
+-----
+Checkout http://autoform-markdown.meteor.com/
 
 Usage
 -----
